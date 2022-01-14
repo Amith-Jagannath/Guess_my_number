@@ -24,7 +24,17 @@ header {
   height: 35vh;
   border-bottom: 7px solid #eee;
 }
-
+#mydiv {
+  font-size: 3rem;
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+#mydiv2 {
+  font-size: 2rem;
+  display: none;
+  margin: 2rem;
+}
 main {
   height: 65vh;
   color: #eee;

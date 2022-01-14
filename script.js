@@ -12,6 +12,22 @@ const display = function (message) {
 
 const number = Math.trunc(Math.random() * 20);
 // document.querySelector('.number').textContent = number;
+function myFunction() {
+  let x = document.getElementById('mydiv');
+  if (x.style.display === 'block') {
+    x.style.display = 'none';
+  } else {
+    x.style.display = 'block';
+  }
+}
+function myFunction2() {
+  let x = document.getElementById('mydiv2');
+  if (x.style.display === 'block') {
+    x.style.display = 'none';
+  } else {
+    x.style.display = 'block';
+  }
+}
 let score = 20;
 let highscore = 0;
 document.querySelector('.check').addEventListener('click', function () {
@@ -27,6 +43,8 @@ document.querySelector('.check').addEventListener('click', function () {
         highscore = score;
         document.querySelector('.highscore').textContent = highscore;
       }
+      document.querySelector('.number').textContent = number;
+      myFunction();
     } else if (guess > number) {
       display('Too high');
       score--;
@@ -39,6 +57,7 @@ document.querySelector('.check').addEventListener('click', function () {
   } else {
     display('You Lost!!');
     document.querySelector('.score').textContent = 0;
+    myFunction2();
   }
 });
 document.querySelector('.again').addEventListener('click', function () {
